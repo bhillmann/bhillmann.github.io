@@ -4,8 +4,8 @@ from __future__ import unicode_literals
 import os
 
 AUTHOR = 'Benjamin Hillmann'
-SITENAME = "Ben's Blog"
-SITEURL = 'https://bhillmann.github.io'
+SITENAME = "Ben of 1"
+SITEURL = ''
 
 PATH = 'content'
 
@@ -37,4 +37,21 @@ DEFAULT_PAGINATION = 10
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['plugins', os.path.join('plugins', 'pelican-plugins')]
-PLUGINS = ['pelican-ipynb.markup']
+PLUGINS = ['pelican-ipynb.markup', 'i18n_subsites']
+
+
+#banner
+BANNER='images/mountain_night.jpg'
+
+#path config
+STATIC_PATHS=['images', 'extra/favicon.ico', 'extra/robots.txt']
+
+THEME = os.path.join('themes', 'pelican-themes', 'pelican-bootstrap3')
+BOOTSTRAP_THEME = 'simplex'
+PYGMENTS_STYLE = 'xcode'
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
+
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'}
+}
