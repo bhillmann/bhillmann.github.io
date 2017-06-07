@@ -5,7 +5,7 @@ import os
 
 AUTHOR = 'Benjamin Hillmann'
 SITENAME = "Ben's Blog"
-SITEURL = 'http://bhillmann.github.io'
+SITEURL = 'https://bhillmann.github.io'
 
 PATH = 'content'
 
@@ -37,4 +37,4 @@ DEFAULT_PAGINATION = 10
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['plugins', os.path.join('plugins', 'pelican-plugins')]
-PLUGINS = ['ipynb.markup']
+PLUGINS = ['pelican-ipynb.markup']
